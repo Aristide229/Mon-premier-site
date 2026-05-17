@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon Premier Projet GitHub</title>
+
+<style>
+body{
+    background:linear-gradient(135deg,#111827,#1d4ed8);
+    font-family:Arial;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.box{
+    background:white;
+    color:black;
+    max-width:500px;
+    margin:auto;
+    padding:30px;
+    border-radius:20px;
+}
+
+button{
+    background:#2563eb;
+    border:none;
+    padding:15px 25px;
+    color:white;
+    border-radius:12px;
+    font-size:18px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🚀 Mon Premier Site GitHub</h1>
+
+<div class="box">
+<h2>Bienvenue</h2>
+
+<p id="text">
+Clique sur le bouton 👇
+</p>
+
+<button onclick="changeText()">
+Changer le texte
+</button>
+</div>
+
+<script>
+function changeText(){
+document.getElementById("text").innerHTML =
+"🎉 Bravo ! Ton site fonctionne parfaitement.";
+}
+</script>
+
+</body>
+</html>
