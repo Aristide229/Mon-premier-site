@@ -3,59 +3,406 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mon Premier Projet GitHub</title>
+<title>Aristide229 | Site Professionnel</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
 body{
-    background:linear-gradient(135deg,#111827,#1d4ed8);
-    font-family:Arial;
-    color:white;
-    text-align:center;
-    padding:40px;
+background:#0f172a;
+color:white;
 }
 
-.box{
-    background:white;
-    color:black;
-    max-width:500px;
-    margin:auto;
-    padding:30px;
-    border-radius:20px;
+header{
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+padding:15px 8%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+position:sticky;
+top:0;
+z-index:999;
+border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
-button{
-    background:#2563eb;
-    border:none;
-    padding:15px 25px;
-    color:white;
-    border-radius:12px;
-    font-size:18px;
-    cursor:pointer;
+.logo{
+font-size:28px;
+font-weight:bold;
+background:linear-gradient(45deg,#3b82f6,#8b5cf6,#ec4899);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#60a5fa;
+}
+
+.hero{
+min-height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:50px 8%;
+background:linear-gradient(135deg,#0f172a,#1d4ed8,#7c3aed);
+text-align:center;
+}
+
+.hero-content{
+max-width:700px;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+line-height:1.7;
+opacity:0.9;
+}
+
+.hero button{
+margin-top:30px;
+padding:16px 30px;
+font-size:18px;
+border:none;
+border-radius:14px;
+background:white;
+color:#111827;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+transform:scale(1.05);
+}
+
+.stats{
+padding:70px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+background:#111827;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card i{
+font-size:40px;
+margin-bottom:20px;
+color:#60a5fa;
+}
+
+.card h2{
+font-size:35px;
+margin-bottom:10px;
+}
+
+.blog{
+padding:80px 8%;
+background:#0f172a;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+}
+
+.blog-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.blog-card{
+background:#1e293b;
+border-radius:20px;
+overflow:hidden;
+transition:0.3s;
+}
+
+.blog-card:hover{
+transform:translateY(-8px);
+}
+
+.blog-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.blog-content{
+padding:25px;
+}
+
+.blog-content h3{
+margin-bottom:15px;
+font-size:24px;
+}
+
+.blog-content p{
+opacity:0.8;
+line-height:1.6;
+}
+
+.contact{
+padding:80px 8%;
+background:#111827;
+text-align:center;
+}
+
+.contact-box{
+max-width:650px;
+margin:auto;
+background:#1e293b;
+padding:40px;
+border-radius:25px;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+padding:15px;
+margin-top:15px;
+border:none;
+border-radius:12px;
+background:#0f172a;
+color:white;
+}
+
+.contact button{
+margin-top:20px;
+padding:15px 30px;
+border:none;
+border-radius:12px;
+background:#2563eb;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+footer{
+background:black;
+padding:25px;
+text-align:center;
+font-size:15px;
+}
+
+.provider{
+margin-top:10px;
+color:#60a5fa;
+font-weight:bold;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+color:white;
+text-decoration:none;
+box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
 }
 </style>
 </head>
-
 <body>
 
-<h1>🚀 Mon Premier Site GitHub</h1>
+<header>
+<div class="logo">Aristide229</div>
 
-<div class="box">
-<h2>Bienvenue</h2>
+<nav>
+<a href="#home">Accueil</a>
+<a href="#blog">Blog</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-<p id="text">
-Clique sur le bouton 👇
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>🚀 Développez votre présence digitale</h1>
+
+<p>
+Bienvenue sur notre plateforme professionnelle spécialisée dans la création de sites modernes, le trafic web, le marketing digital et les outils d’analyse avancés.
 </p>
 
-<button onclick="changeText()">
-Changer le texte
+<button onclick="showMessage()">
+Découvrir maintenant
 </button>
 </div>
+</section>
+
+<section class="stats">
+
+<div class="card">
+<i class="fa-solid fa-users"></i>
+<h2 id="visitors">0</h2>
+<p>Visiteurs</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-chart-line"></i>
+<h2 id="traffic">0</h2>
+<p>Trafic généré</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-globe"></i>
+<h2 id="countries">0</h2>
+<p>Pays connectés</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-bolt"></i>
+<h2 id="speed">0</h2>
+<p>Performance</p>
+</div>
+
+</section>
+
+<section class="blog" id="blog">
+<h2 class="section-title">📰 Blog Professionnel</h2>
+
+<div class="blog-grid">
+
+<div class="blog-card">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="blog">
+
+<div class="blog-content">
+<h3>Marketing Digital</h3>
+<p>
+Découvrez les meilleures stratégies pour développer votre audience et améliorer votre visibilité sur internet.
+</p>
+</div>
+</div>
+
+<div class="blog-card">
+<img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop" alt="blog">
+
+<div class="blog-content">
+<h3>Trafic & Analyse</h3>
+<p>
+Analysez vos visiteurs grâce à des outils modernes et augmentez vos performances en ligne.
+</p>
+</div>
+</div>
+
+<div class="blog-card">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="blog">
+
+<div class="blog-content">
+<h3>Création de Sites</h3>
+<p>
+Créez des interfaces professionnelles modernes adaptées aux mobiles et aux ordinateurs.
+</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="contact" id="contact">
+<h2 class="section-title">📩 Contact</h2>
+
+<div class="contact-box">
+<input type="text" placeholder="Votre nom">
+<input type="email" placeholder="Votre email">
+<textarea rows="5" placeholder="Votre message"></textarea>
+<button>Envoyer</button>
+</div>
+</section>
+
+<footer>
+© 2026 Aristide229 - Tous droits réservés.
+<div class="provider">
+Fournisseur : Aristide229
+</div>
+</footer>
+
+<a href="https://wa.me/22900000000" class="whatsapp">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
 
 <script>
-function changeText(){
-document.getElementById("text").innerHTML =
-"🎉 Bravo ! Ton site fonctionne parfaitement.";
+function showMessage(){
+alert("Bienvenue sur la plateforme professionnelle Aristide229 🚀");
 }
+
+function animateValue(id,start,end,duration){
+let obj=document.getElementById(id);
+let range=end-start;
+let current=start;
+let increment=end>start ? 1 : -1;
+let stepTime=Math.abs(Math.floor(duration/range));
+
+let timer=setInterval(function(){
+current += increment;
+obj.innerHTML=current;
+
+if(current==end){
+clearInterval(timer);
+}
+},stepTime);
+}
+
+animateValue("visitors",0,5000,2000);
+animateValue("traffic",0,12000,2000);
+animateValue("countries",0,35,2000);
+animateValue("speed",0,100,2000);
 </script>
 
 </body>
